@@ -24,11 +24,12 @@ class AddExtDataHelper {
             currclient.connect();
 
             currclient.query('INSERT INTO Salesforce.external_data(account_id, data) VALUES($1, $2) RETURNING ID;', [reqBodyForm.account, reqBodyForm.data_val],(err, res) => {
-                if (err){
+                console.log('THIS IS WHERE TO LOOK');
+		console.log(res);
+		if (err){
                     reject();
                 }
                 currclient.end();
-		console.log(res);
                 resolve(res.rows);
             });
         });
