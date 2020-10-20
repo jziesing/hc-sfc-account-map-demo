@@ -28,6 +28,7 @@ class AddExtDataHelper {
                     reject();
                 }
                 currclient.end();
+		console.log(res);
                 resolve(res.rows);
             });
         });
