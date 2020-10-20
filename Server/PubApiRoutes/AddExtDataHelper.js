@@ -28,6 +28,7 @@ class AddExtDataHelper {
 		console.log(res);
 		if (err){
 		    console.log('ERROR hit');
+		    console.log(err);
                     reject();
                 }
                 currclient.end();
